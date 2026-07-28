@@ -14,9 +14,7 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
-# Add project root to path
 project_root = Path(__file__).parent
-sys.path.insert(0, str(project_root))
 
 def start_bot():
     """Khởi động trading bot."""

@@ -2,8 +2,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from typing import Dict, Any, Optional
 import pandas as pd
 
@@ -311,5 +309,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 

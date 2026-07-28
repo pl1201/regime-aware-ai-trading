@@ -38,15 +38,15 @@ from algo_trading.strategies import (
     GARCHVolatilityStrategy,
 )
 from algo_trading.strategies.base import BaseStrategy, StrategyResult
+from algo_trading.config import BotConfig
+from algo_trading.live.exchange_base import ExchangeClient, SymbolFilters
 
 # Import Exchange clients
 try:
-    from algo_trading.live.exchange_base import ExchangeClient
     from algo_trading.live.okx_client import OKXClient
     HAS_OKX = True
 except ImportError:
     HAS_OKX = False
-    ExchangeClient = None
     OKXClient = None
 
 # Import Regime Transformer Strategy
@@ -235,40 +235,7 @@ STRATEGY_MAP.update(
 )
 
 
-@dataclass
-class BotConfig:
-    """Cấu hình bot live trading."""
-    mode: str = "paper"  # paper, testnet, live
-    exchange: str = "binance"  # binance, okx
-    symbol: str = "BTCUSDT"
-    interval: str = "5m"
-    strategy_name: str = "sma_ema"
-    strategy_params: Dict[str, Any] = None
-    risk_per_trade: float = 0.1  # % số dư quote
-    sl_pct: Optional[float] = None
-    tp_pct: Optional[float] = None
-    trailing_pct: Optional[float] = None
-    sl_atr_k: Optional[float] = None
-    tp_atr_k: Optional[float] = None
-    trailing_atr_k: Optional[float] = None
-    atr_col: str = "ATR14"
-    history_limit: int = 200
-    cool_down_sec: int = 60
-    check_interval_sec: int = 30
-    max_position_size: Optional[float] = None  # Giới hạn tối đa position size
-    max_dca_orders: int = 1  # Số lệnh tối đa (1 = không DCA)
-
-
-@dataclass
-class SymbolFilters:
-    """Filters từ Binance exchange info."""
-    step_size: float
-    min_qty: float
-    min_notional: float
-    tick_size: float
-
-
-class BinanceClient:
+class BinanceClient(ExchangeClient):
     """Wrapper cho Binance API client."""
     
     def __init__(self, api_key: Optional[str], api_secret: Optional[str], config: BotConfig):
@@ -421,7 +388,7 @@ class BinanceClient:
 class LiveTradingBot:
     """Bot live trading tổng quát."""
     
-    def __init__(self, client: BinanceClient, strategy: BaseStrategy, config: BotConfig):
+    def __init__(self, client: ExchangeClient, strategy: BaseStrategy, config: BotConfig):
         self.client = client
         self.strategy = strategy
         self.config = config
@@ -1180,4 +1147,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

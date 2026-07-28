@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+import os
 from pathlib import Path
 
 
@@ -41,9 +42,13 @@ def check_dry_run(project_root: Path) -> list[str]:
     cmd = [sys.executable, "start_trading_bot.py", "dry-run"]
     print(f"[INFO] run: {' '.join(cmd)}")
 
+    smoke_env = os.environ.copy()
+    smoke_env["BOT_OFFLINE_SMOKE"] = "1"
+
     result = subprocess.run(
         cmd,
         cwd=project_root,
+        env=smoke_env,
         capture_output=True,
         text=True,
         encoding="utf-8",

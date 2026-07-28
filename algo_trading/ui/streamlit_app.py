@@ -1,11 +1,5 @@
 from __future__ import annotations
-import os
-import sys
 import streamlit as st
-
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-if ROOT not in sys.path:
-    sys.path.append(ROOT)
 
 # Import config and utilities
 from algo_trading.ui.sidebar import render_sidebar
@@ -56,4 +50,3 @@ with main_tabs[2]:
 if HAS_ADVANCED_TAB and len(main_tabs) > 3:
     with main_tabs[3]:
         render_regime_ensemble_advanced_tab(sidebar_config)
-

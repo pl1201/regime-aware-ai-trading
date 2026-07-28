@@ -17,13 +17,6 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 import warnings
-import sys
-import os
-
-# Add project root to path
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-if ROOT not in sys.path:
-    sys.path.append(ROOT)
 
 from algo_trading.ui.utils import load_df_from_sidebar_config
 from algo_trading.backtest.vectorized import run_backtest, BacktestConfig, RiskConfig
@@ -971,4 +964,3 @@ def _render_analysis_tab(sidebar_config: Dict[str, Any]) -> None:
             st.warning(f"⚠️ Không thể load feature importance: {e}")
 def render_regime_ensemble_advanced_tab_alias(sidebar_config: Dict[str, Any]) -> None:
     return render_regime_ensemble_advanced_tab(sidebar_config)
-

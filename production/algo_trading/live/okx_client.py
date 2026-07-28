@@ -17,7 +17,7 @@ import pandas as pd
 import numpy as np
 
 from algo_trading.live.exchange_base import ExchangeClient, SymbolFilters
-from algo_trading.live.universal_bot import BotConfig
+from algo_trading.config import BotConfig
 
 logger = logging.getLogger(__name__)
 
