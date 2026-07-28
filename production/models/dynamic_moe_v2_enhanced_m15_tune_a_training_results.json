@@ -1,0 +1,42 @@
+{
+  "best_threshold": 0.28,
+  "val_best_profit_factor": 1.046172705052559,
+  "val_best_expectancy": 3.102534049622053e-05,
+  "val_best_objective_score": 6.578622379522495,
+  "overall_accuracy": 0.413316020417301,
+  "macro_f1": 0.41252307944418404,
+  "wf_summary": {
+    "folds": 4,
+    "pass_rate": 0.25,
+    "pf_mean": 1.0500564595989859,
+    "pf_std": 0.05383265555786955,
+    "coverage_mean": 0.1670103432636535,
+    "coverage_cv": 0.2559350324023407,
+    "stable": false
+  },
+  "yearly_wf_summary": {
+    "years": 2,
+    "pass_rate": 0.0,
+    "pf_mean": 1.0388231758344095,
+    "stable": false
+  },
+  "acceptance_checks": {
+    "coverage_ok": true,
+    "pf_ok": true,
+    "winrate_ok": true,
+    "profit_ratio_ok": false,
+    "drawdown_ok": true,
+    "wf_stable_ok": false
+  },
+  "accepted_for_production": false,
+  "trade_accuracy": 0.3207850707850708,
+  "expectancy": 2.6371839122666113e-05,
+  "winrate": 0.5307370453813969,
+  "rr_ratio": 0.9148479790579003,
+  "profit_factor": 1.0346943192499847,
+  "coverage": 0.1391600250738784,
+  "total_signals": 3108,
+  "winning_trades": 1649,
+  "losing_trades": 1458,
+  "max_drawdown": 0.08654024793035442
+}

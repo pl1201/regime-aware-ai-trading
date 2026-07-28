@@ -1,0 +1,90 @@
+# Secrets and local env
+.env
+**/.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Python cache and build output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime artifacts
+*.pid
+*.log
+logs/
+/20.0
+
+# Large/generated artifacts: keep these out of GitHub
+*.zip
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.h5
+*.parquet
+*.feather
+*.sqlite
+*.db
+/catboost_info/
+/outputs/
+/outputs_few/
+/results/
+/validation_results/
+/models/
+/data/*.csv
+!/data/sentiment/sample_train.csv
+
+# Local AI/editor metadata
+.agents/
+.claude/
+.cursor/
+.kiro/
+
+# Research scratch space and duplicated deployment bundles
+/tmp_research_results/
+/archive/
+/production/archive/
+/AlgoBot/
+/BotTrade/
+/moe_v3_hmm_deploy/
+/moe_v3_hmm_web_deploy/
+/h1_enhanced_production/
+/production_best_model/
+/product/
+/notebooks/
+/tmp_*.py
+**
+/*_SUMMARY.md
+/DEPLOYMENT_INSTRUCTIONS.txt
+/BAO_CAO_*.md
+/CHECKLIST_*.md
+/FIX_*.md
+/implementation_plan.md
+/*.doc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,15 @@
+{
+  "best_threshold": 0.47000000000000014,
+  "val_best_profit_factor": 2.4111967977799984,
+  "val_best_expectancy": 0.0007438655744115868,
+  "val_best_objective_score": 9.951333213228448,
+  "overall_accuracy": 0.4745231485627295,
+  "macro_f1": 0.4435343274533004,
+  "trade_accuracy": 0.34285714285714286,
+  "expectancy": -0.0006617827693921449,
+  "winrate": 0.5428571428571428,
+  "rr_ratio": 0.4992521018438967,
+  "profit_factor": 0.5928618709396273,
+  "coverage": 0.003134234798961225,
+  "total_signals": 70
+}

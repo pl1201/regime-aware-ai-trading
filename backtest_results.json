@@ -1,0 +1,29 @@
+{
+  "total_return": 0.00010433858985692268,
+  "sharpe": 0.07785679315035282,
+  "max_drawdown": -10.059386059443165,
+  "cagr": 0.012704023580645263,
+  "profit_factor": 1.5996865050988565,
+  "winrate": 66.66666666666666,
+  "total_trades": 3,
+  "winning_trades": 2,
+  "losing_trades": 1,
+  "expectancy": 0.6978235287467904,
+  "avg_win": 2.792206108655105,
+  "avg_loss": -3.4909416310698376,
+  "timestamp": "2026-02-06T16:33:18.165240",
+  "meta": {
+    "current_regime": "calm",
+    "allowed_regimes": [
+      "trending",
+      "ranging",
+      "calm"
+    ],
+    "proba_threshold": 0.45,
+    "model_path": null,
+    "n_bars": 1000,
+    "avg_dynamic_threshold": 0.5429030328599077,
+    "signal_count": 49,
+    "using_regime_specific": true
+  }
+}

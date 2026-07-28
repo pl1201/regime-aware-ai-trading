@@ -1,0 +1,32 @@
+# Secrets
+.env
+
+# Runtime artifacts
+*.pid
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local env
+.venv/
+venv/
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Large generated outputs
+outputs/
+outputs_few/
+results/
+validation_results/

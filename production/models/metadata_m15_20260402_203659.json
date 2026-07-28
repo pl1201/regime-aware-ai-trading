@@ -1,0 +1,17 @@
+{
+  "timestamp": "20260402_203659",
+  "n_train": 7000,
+  "n_test": 3000,
+  "n_features": 33,
+  "experts": [
+    "MomentumBreakout",
+    "MeanReversion",
+    "RangeBounce"
+  ],
+  "ensemble_test_acc": 0.42,
+  "expert_test_acc": {
+    "MomentumBreakout": 0.4066666666666667,
+    "MeanReversion": 0.398,
+    "RangeBounce": 0.3903333333333333
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-14T12:12:52.072599",
+  "model_used": "regime_ensemble_features.pkl",
+  "results": [
+    {
+      "config_name": "Standard (Target)",
+      "proba_threshold": 0.35,
+      "total_trades": 0,
+      "winning_trades": 0,
+      "losing_trades": 0,
+      "winrate": 0,
+      "profit_factor": 0,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "avg_win": 0,
+      "avg_loss": 0
+    },
+    {
+      "config_name": "Aggressive",
+      "proba_threshold": 0.3,
+      "total_trades": 0,
+      "winning_trades": 0,
+      "losing_trades": 0,
+      "winrate": 0,
+      "profit_factor": 0,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "avg_win": 0,
+      "avg_loss": 0
+    }
+  ],
+  "summary": {
+    "avg_winrate": 0,
+    "avg_profit_factor": 0,
+    "avg_sharpe": 0.0,
+    "avg_drawdown": 0.0,
+    "best_config": "Standard (Target)"
+  }
+}
