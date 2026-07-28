@@ -21,7 +21,7 @@ except Exception:
     nn = None
 
 
-class _TinyTCN(nn.Module):
+class _TinyTCN(nn.Module if TORCH_AVAILABLE else object):
 
     def __init__(self, seq_len: int = 64, channels: int = 16, kernel_size: int = 3, dropout: float = 0.1):
         super().__init__()
@@ -43,7 +43,7 @@ class _TinyTCN(nn.Module):
         return self.head(h).squeeze(-1)
 
 
-class _TinyLSTM(nn.Module):
+class _TinyLSTM(nn.Module if TORCH_AVAILABLE else object):
 
 
     def __init__(self, seq_len: int = 64, hidden_size: int = 32, num_layers: int = 1, dropout: float = 0.1):
